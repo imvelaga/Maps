@@ -1,0 +1,335 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#MainContainer {
+	height: 100vh;
+	width: 100vw;
+}
+
+#MenuArea {
+	position: absolute;
+	width: 30%;
+	min-width: 300px;
+	background: #4285f4;
+	z-index: 999;
+	height: 100%;
+	transition: all ease 0.3s;
+	color: white;
+	box-shadow: 4px 0px 8px grey;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	background: lightgrey;
+	z-index: 1;
+	position: absolute;
+}
+
+ng-map {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#MenuBtn {
+	position: absolute;
+	cursor: pointer;
+	z-index: 998;
+	color: black;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+#close {
+	position: absolute;
+	right: 10px;
+	z-index: 999;
+	top: 12px;
+	cursor: pointer;
+}
+
+#close1 {
+	position: relative;
+	left: 15px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+#MenuContent {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#SearchSec {
+	position: relative;
+	min-height: 101px;
+	height: 15%;
+	width: 100%;
+	transition: all ease .3s;
+}
+
+#dir_Car {
+	transition: all ease .3s;
+	cursor: pointer;
+}
+
+.ng-show {
+	left: 0px;
+}
+
+.dirSel {
+	background: #4285f4;
+}
+
+.ShowSearchBox {
+	height: 45% !important;
+}
+
+.StretchOtherInfo {
+	height: 85% !important;
+	top: 0px !important;
+}
+
+#OtherInfo {
+	position: relative;
+	height: 40%;
+	width: 100%;
+	overflow-y: auto;
+	padding: 1px;
+	top: 50px;
+}
+
+#SearchSecFoot {
+	position: absolute;
+	height: 20%;
+	width: 14%;
+	border-radius: 40px;
+	background: #3367d6;
+	box-shadow: -1px 1px 2px #353535;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#RightExtender {
+	position: absolute;
+	display: inline-block;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	transition: all ease .3s;
+}
+
+#RightExtender:hover>i {
+	text-shadow: 2px 2px 4px black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.extendMenuArea {
+	width: 100% !important;
+}
+
+#SearchSecHead {
+	position: fixed;
+	top: 0px;
+	height: 50px;
+	width: 100%;
+	background: #3367d6;
+	box-shadow: -2px 2px 7px black;
+}
+
+#SearchSecHead ul {
+	list-style: none;
+	padding: 0px 10px;
+}
+
+#SearchSecHead li {
+	display: inline-block;
+	margin: -5px 10px;
+	border-radius: 100%;
+	transition: all ease 0.3s;
+	padding: 2px 5px;
+}
+
+#SearchSecHead li:hover {
+	background: #4285f4;
+}
+
+div#SearchSecBody {
+	position: relative;
+	margin: 50px 0px;
+	padding: 10px 0px;
+	width: 100%;
+	opacity: 0;
+	transition: all ease 0.3s;
+	height: 100%;
+	max-height: 100%;
+	overflow-y: scroll;
+	display: none;
+}
+
+.ShowSearchBox #SearchSecBody {
+	opacity: 1 !important;
+	display: block !important;
+}
+
+.ShowSearchBox #SearchSecFoot {
+	bottom: -50px !important;
+}
+
+.searchInputFields {
+	height: 40px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+
+.srchBoxinpDiv {
+	background-clip: padding-box;
+	width: 290px;
+	border: none;
+	position: relative;
+	outline: none;
+	margin: 0;
+	transition-property: none;
+	height: 38px;
+	padding: 10px 20px 0px 20px;
+	text-overflow: ellipsis;
+}
+
+.MapInputTxt {
+	color: #bdbdbd;
+	font-size: 14px;
+}
+
+.MapInputTxt {
+	background: transparent;
+	color: whitesmoke;
+	outline: none;
+	border: 0px;
+	font-size: 16px;
+	box-shadow: 0px 1px 0px lightgrey;
+	padding: 0px 4px 4px 4px;
+	width: 100%;
+}
+
+.SwapRoutes {
+	padding: 5px 20px 0px 0px;
+	cursor: pointer;
+}
+
+.DragBox {
+	padding: 5px 0px 0px 25px;
+	cursor: -webkit-grab;
+}
+
+.DragBox i {
+	padding: 5px 0px;
+}
+
+.mouseholding {
+	cursor: -webkit-grabbing !important;
+}
+
+div#GetRoutes {
+	background: transparent;
+	border: 1px solid white;
+	outline: none;
+	padding: 4px 20px;
+	border-radius: 2em;
+	font-size: 1em;
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+div#GetRoutes:hover {
+	background: white;
+	color: #4285f4;
+}
+
+div#GetRoutes span {
+	margin-right: 30px;
+}
+
+.Routedirs {
+	display: flex;
+	align-items: flex-start;
+	box-shadow: 0px 1px 1px #3367d6;
+	padding: 5px 0px;
+}
+
+.Routedirs>article {
+	margin-right: 10px;
+}
+
+.Routedirs:hover {
+	background: #3367d6;
+}
+
+#directions-panel {
+	display: grid;
+}
+
+.addFld {
+	display: flex;
+	align-items: center;
+	padding: 5px 0px;
+}
+
+.AddBox {
+	margin: 5px 25px;
+}
+
+.AddBox i {
+	cursor: pointer;
+}
+
+.AddLocDesc {
+	opacity: 0;
+	color: lightgrey;
+}
+
+.AddBox:hover ~ .AddLocDesc {
+	opacity: 1 !important;
+}
+
+#NoContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #3367d6;
+}
